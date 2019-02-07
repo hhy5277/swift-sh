@@ -22,6 +22,14 @@ class RunIntegrationTests: XCTestCase {
 
             print(Promise.value(3))
             """)
+            
+        // TEMPORARY TO SEE OUTPUT from `swift run`
+        XCTAssertRuns(exec: """
+            import PMKFoundation  // PromiseKit/Foundation ~> 3
+            import PromiseKit
+
+            print(Promise.value(3))
+            """)
     }
 
     func testTestableImport() {
